@@ -1,7 +1,12 @@
 package com.example.shein.kotlindemo20180929
 
 /**
- * Created by liuxue on 2018/9/29.
+ * Created by liuxue on 2018/10/8.
  */
-class UserInfo {
-}
+
+data class UserInfo(
+        var name: String = "",
+        var age: String = ""
+)
+
+
