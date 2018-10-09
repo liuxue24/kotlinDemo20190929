@@ -1,0 +1,22 @@
+Kotlin——高级篇（一）：Lambda表达式详解
+一、Lambda介绍
+Lambda表达式的本质其实是匿名函数，因为在其底层实现中还是通过匿名函数来实现的。但是我们在用的时候不必关心起底层实现。不过Lambda的出现确实是减少了代码量的编写，同时也是代码变得更加简洁明了。
+Lambda作为函数式编程的基础，其语法也是相当简单的。这里先通过一段简单的代码演示没让大家了解Lambda表达式的简洁之处。
+
+// 这里举例一个Android中最常见的按钮点击事件的例子
+mBtn.setOnClickListener(object : View.OnClickListener{
+        override fun onClick(v: View?) {
+            Toast.makeText(this,"onClick",Toast.LENGTH_SHORT).show()
+        }
+    })
+等价于
+
+// 调用
+mBtn.setOnClickListener { Toast.makeText(this,"onClick",Toast.LENGTH_SHORT).show() }
+
+二、Lambda使用
+2.1、Lambda表达式的特点
+Lambda表达式总是被大括号括着
+其参数(如果存在)在 -> 之前声明(参数类型可以省略)
+函数体(如果存在)在 -> 后面。
+2.2、Lambda语法
