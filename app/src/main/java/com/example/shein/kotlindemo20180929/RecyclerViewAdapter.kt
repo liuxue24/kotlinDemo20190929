@@ -42,6 +42,10 @@ class RecyclerViewAdapter(private var context: RecyclerViewActivity) : RecyclerV
         dataBinding.ageTv.setOnClickListener {
             Toast.makeText(context, "这是age${position}", Toast.LENGTH_SHORT).show()
         }
+
+//        dataBinding.ageTv.setOnClickListener {position,item ->
+//            Toast.makeText(context, "这是age${position}", Toast.LENGTH_SHORT).show()
+//        }
     }
 
 }
